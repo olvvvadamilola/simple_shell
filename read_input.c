@@ -4,7 +4,7 @@
  *
  * Return: string containing input.
  */
-char *read_line(void)
+char *readlin_e(void)
 {
 	char *line = NULL;
 	size_t len = 0;
