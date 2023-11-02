@@ -77,7 +77,7 @@ char *_strcpy(char *dest, char *src)
  * @str: string
  * Return: 0
  */
-char *_strdup(char *str)
+char *_strdup(const char *str)
 {
 	int size = 0;
 	int i;

@@ -14,7 +14,7 @@
 #include <fcntl.h>
 
 
-#define DELIMITERS " \t\n\r\a"
+#define DELIMITERS " \t\n"
 extern char **environ;
 
 /*---Print---*/
@@ -22,7 +22,7 @@ int _putchar(char c);
 void p_string(const char *ppp);
 
 /*----main----*/
-char *read_line(void);
+char *readlin_e(void);
 char **toke_n(char *line);
 
 int execut_e(char **cmd, char **argv);
@@ -32,7 +32,7 @@ void free_array(char **array);
 
 
 /*----custom functions----*/
-char *_strdup(char *str);
+char *_strdup(const char *str);
 int _strlen(char *l);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
