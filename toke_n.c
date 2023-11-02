@@ -12,8 +12,9 @@ char **toke_n(char *line)
 
 	if (!line)
 		return (NULL);
+
 	temp = _strdup(line);
-	token = strtok(line, DELIMITERS);
+	token = strtok(temp, DELIMITERS);
 
 	if (token == NULL)
 	{
@@ -22,7 +23,7 @@ char **toke_n(char *line)
 		return (NULL);
 	}
 
-	for (i = 0; token != NULL; i++)
+	for (; token != NULL; i++)
 	{
 		token = strtok(NULL, DELIMITERS);
 	}
