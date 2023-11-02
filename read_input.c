@@ -1,25 +1,25 @@
 #include "shell.h"
 /**
- * read_input - reads input from stdin
+ * read_line - reads line from stdin
  *
  * Return: string containing input.
  */
-char *read_input(void)
+char *read_line(void)
 {
-	char *input = NULL;
+	char *line = NULL;
 	size_t len = 0;
 	ssize_t x;
 
 
-	write(STDOUT_FILENO, "> ", 2);
+	write(STDOUT_FILENO, "$ ", 2);
 
-	x = getline(&input, &len, stdin);
+	x = getline(&line, &len, stdin);
 
 	if (x == -1)
 	{
-		free(input);
+		free(line);
 		return (NULL);
 	}
 
-	return (input);
+	return (line);
 }

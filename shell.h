@@ -22,7 +22,7 @@ int _putchar(char c);
 void p_string(const char *ppp);
 
 /*----main----*/
-char *read_input(void);
+char *read_line(void);
 char **toke_n(char *line);
 
 int execut_e(char **cmd, char **argv);
