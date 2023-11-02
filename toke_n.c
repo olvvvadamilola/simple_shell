@@ -15,33 +15,30 @@ char **toke_n(char *line)
 
 	temp = _strdup(line);
 	token = strtok(temp, DELIMITERS);
-
 	if (token == NULL)
 	{
 		free(line), line = NULL;
 		free(temp), temp = NULL;
 		return (NULL);
 	}
-
-	for (; token != NULL; i++)
+	while (token)
 	{
+		i++;
 		token = strtok(NULL, DELIMITERS);
 	}
-	free(temp);
-	temp = NULL;
-
+	free(temp), temp = NULL;
 	cmd = malloc((i + 1) * sizeof(char *));
 	if (!cmd)
 	{
 		free(line), line = NULL;
 		return (NULL);
 	}
-
 	token = strtok(line, DELIMITERS);
-	for (; token; j++)
+	while (token)
 	{
 		cmd[j] = _strdup(token);
 		token = strtok(NULL, DELIMITERS);
+		j++;
 	}
 	free(line), line = NULL;
 	cmd[j] = NULL;
