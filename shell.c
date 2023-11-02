@@ -7,21 +7,21 @@
  */
 int main(int ac, char **argv)
 {
-	char *input = NULL, **cmd = NULL;
+	char *line = NULL, **cmd = NULL;
 	int status = 0;
 	(void) ac;
 
 	while (1)
 	{
-		input = readlin_e();
-		if (input == NULL)
+		line = readlin_e();
+		if (line == NULL)
 		{
 			if (isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1);
 			return (status);
 		}
 
-		cmd = toke_n(input);
+		cmd = toke_n(line);
 		if (!cmd)
 			continue;
 

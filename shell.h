@@ -17,10 +17,6 @@
 #define DELIMITERS " \t\n"
 extern char **environ;
 
-/*---Print---*/
-int _putchar(char c);
-void p_string(const char *ppp);
-
 /*----main----*/
 char *readlin_e(void);
 char **toke_n(char *line);
