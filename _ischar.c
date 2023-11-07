@@ -1,9 +1,10 @@
 #include "shell.h"
 /**
- * is_char - check if a character is present in a string
+ * _ischar - check if a character is present in a string
  * @str: string to check
+ * Return: 0
 */
-int is_char(char *str)
+int _ischar(char *str)
 {
 	if (!str)
 		return (0);

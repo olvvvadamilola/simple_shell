@@ -19,6 +19,8 @@ char *_strdup(char *comm);
 char *_strcat(char *dst, char *src);
 int _strcmp(const char *comm, const char *b);
 char *_strchr(const char *str, const char *c);
+int _atoi(const char *comm);
+int _ischar(char *str);
 
 
 #endif /* SHELL_H */
