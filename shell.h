@@ -12,5 +12,13 @@
 /*---define---*/
 #define DE_LIM " \t\r\n\a"
 
+/**---handle_strings---*/
+int _strlen(const char *comm);
+char *_strcpy(char *dst, const char *src);
+char *_strdup(char *comm);
+char *_strcat(char *dst, char *src);
+int _strcmp(const char *comm, const char *b);
+char *_strchr(const char *str, const char *c);
+
 
 #endif /* SHELL_H */
