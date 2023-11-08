@@ -18,7 +18,7 @@
 int _strlen(const char *comm);
 char *_strcpy(char *dst, char *src);
 char *_strdup(char *comm);
-char *_strcat(char *dst,const char *src);
+char *_strcat(char *dst, const char *src);
 int _strcmp(const char *comm, const char *b);
 char *_strchr(const char *st, char *c);
 int _atoi(const char *comm);
