@@ -10,7 +10,7 @@ int main(int ac, char **av)
 	char *comm = NULL;
 	char **arg;
 	size_t n = 0;
-	ssize_t r;
+	ssize_t x;
 	int m;
 	(void)ac;
 
@@ -18,16 +18,16 @@ int main(int ac, char **av)
 	{
 		if (isatty(STDIN_FILENO) == 1)
 			write(STDOUT_FILENO, "^_^ ", _strlen("^_^ "));
-		r = getline(&comm, &n, stdin);
-		if (r == EOF)
+		x = getline(&comm, &n, stdin);
+		if (x == EOF)
 		{
 			free(comm);
 			break;
 		}
-		r = num_arg(comm);
-		if (r != 0 && isatty(STDIN_FILENO) == 1)
+		x = num_arg(comm);
+		if (x != 0 && isatty(STDIN_FILENO) == 1)
 		{
-			_parscomm(comm, r, &arg);
+			_parscomm(comm, x, &arg);
 			m = _isbuiltin(arg, av);
 			if (_strcmp(arg[0], "exit") == 0 && _ischar(arg[1]) == 0)
 			{
@@ -37,7 +37,7 @@ int main(int ac, char **av)
 		}
 		if (isatty(STDIN_FILENO) == 0)
 		{
-			_parscomm(comm, r, &arg);
+			_parscomm(comm, x, &arg);
 			m = _isbuiltin(arg, av);
 			if (arg == NULL || m >= 2)
 			{
